@@ -1,4 +1,41 @@
+'''
+## Purpose
+This Python script performs **data cleaning, standardization, and consolidation** of raw customer data from three different source systems into a single, clean, analytics-ready **dimension table** called `dim_customer`.
 
+It is designed as part of an ETL (Extract, Transform, Load) process for building a data warehouse or analytics environment where consistent and reliable customer information is required.
+
+### Key Objectives
+- Clean and standardize inconsistent customer data across multiple source tables
+- Resolve data quality issues such as:
+  - Missing values
+  - Duplicated customer records
+  - Inconsistent formatting (names, gender, country codes, dates)
+  - Different abbreviations and representations of the same values (e.g., "M" vs "Male", "US" vs "United States")
+- Create a **single source of truth** for customer master data
+- Generate a **surrogate key** (`cst_key`) for dimensional modeling (star schema compatibility)
+- Merge data from three source tables:
+  - `df_cust_info` → Main customer profile (from ERP/CRM)
+  - `df_cust_loc` → Customer location/country information
+  - `df_cust_demo` → Demographic data (birth date, gender)
+
+### Key Transformations
+- Converts and standardizes date fields
+- Deduplicates customers using `cst_id`/`cst_key`, keeping the most recent record
+- Standardizes gender values (`M`, `F`, `m`, `male` → `Male`/`Female`)
+- Normalizes country names (`US`, `USA`, `de` → `United States`, `Germany`)
+- Intelligently combines gender from two sources using priority logic
+- Strips extra whitespace and fixes case sensitivity
+- Adds a clean surrogate key for use in data warehousing
+
+### Output
+A clean, de-duplicated, standardized dimension table saved as:  
+**`clean_dim_customer.csv`**
+
+This table is ready to be used as a **dimension table** in a data warehouse (e.g., in Snowflake, BigQuery, Redshift, or Power BI).
+
+Ideal for analytics, reporting, customer segmentation, or as a conformed dimension in a enterprise data model.
+
+'''
 #*****************  CLEANING THE CUSTOMER INFORMATION TABLE *******************
 
 df_cust_info.isnull().sum()
