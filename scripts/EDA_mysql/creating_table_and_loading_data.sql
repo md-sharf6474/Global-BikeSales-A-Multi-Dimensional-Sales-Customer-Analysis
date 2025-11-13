@@ -1,3 +1,14 @@
+'''
+Purpose (creating_table_and_loading_data.sql)
+This SQL script sets up a simple star-schema data warehouse (bikeSales_db) for bike sales analysis by:
+
+Creating the database bikeSales_db
+Building the dimension tables dim_customer and dim_product (with surrogate keys)
+Creating the fact table fact_sale with foreign keys referencing the dimensions
+Loading cleaned data from CSV/Excel files (clean_dim_customer.xls, clean_dim_product.xls, clean_fact_sales.xls) into the respective tables using LOAD DATA LOCAL INFILE
+
+Result: A ready-to-query relational data mart with clean, properly linked customer, product, and sales fact data for reporting and BI purposes.
+'''
 -- creating database bikesales_db
 CREATE DATABASE bikeSales_db;
 
