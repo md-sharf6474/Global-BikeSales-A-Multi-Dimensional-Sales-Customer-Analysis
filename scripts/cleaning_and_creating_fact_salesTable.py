@@ -1,3 +1,18 @@
+'''# Sales Fact Table Creation (fact_sales)
+
+## Purpose  
+This script cleans and transforms raw sales transaction data into a clean, analysis-ready **fact table** (`clean_fact_sales.csv`) suitable for data warehousing and BI reporting.
+
+### Key Tasks  
+- Converts order, ship, and due dates to proper datetime  
+- Validates and corrects logical date sequence (order ≤ ship ≤ due)  
+- Fixes incorrect/missing sales amounts using `quantity × price` logic  
+- Recalculates unit price for consistency  
+- Replaces natural keys (`sls_prd_key`, `sls_cust_id`) with **surrogate keys** from `dim_product` and `dim_customer`  
+- Produces a star-schema-compliant fact table ready to join with dimensions  
+
+### Output  
+`clean_fact_sales.csv` – Clean, accurate, and properly keyed fact table for sales analytics.'''
 #understanding the table
 df_sales.info()
 df_sales.head()
