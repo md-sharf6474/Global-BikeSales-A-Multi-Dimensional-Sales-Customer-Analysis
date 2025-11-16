@@ -62,24 +62,15 @@ The final phase was to build an interactive dashboard for a non-technical audien
 * **DAX Measures:** Wrote DAX measures to create key metrics like `[Total Sales]`, `[Total Quantity]`, `[Avg Order Value]`, and `[Sales YTD]`.
 * **Visualization:** Designed a multi-page interactive dashboard with three views:
 
-* <img width="1024" height="1024" alt="Gemini_Generated_Image_ofh2l1ofh2l1ofh2" src="https://github.com/user-attachments/assets/206d920a-442d-49d9-8930-509037336894" />
-
     1.  **Executive Summary:** 
-
     2.  **Product Deep Dive:** Analysis of sales by category, subcategory, and individual product.
     3.  **Customer Analysis:** A breakdown of customer demographics, sales by gender, and sales by marital status.
 
 ---
 
 ## Dashboard Preview
+<img width="1143" height="644" alt="image" src="https://github.com/user-attachments/assets/6a8ef61d-97bb-4742-9fbb-08861a6d8494" />
 
-
-
-*Executive Summary Page:*
-`[Insert screenshot of your main dashboard page]`
-
-*Product Analysis Page:*
-`[Insert screenshot of your product dashboard page]`
 
 ---
 ## ABOUT ME 
