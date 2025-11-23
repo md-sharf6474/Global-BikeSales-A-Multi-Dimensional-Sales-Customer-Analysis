@@ -1,4 +1,4 @@
-# Global CycleSales: A Multi-Dimensional Sales & Customer Analysis
+# Global BikeSales: A Multi-Dimensional Sales & Customer Analysis
 
 This is a complete, end-to-end data analytics portfolio project. The goal was to process raw, disparate data from multiple sources (sales, product, customer), build a clean and robust data pipeline, and ultimately create an interactive dashboard for business stakeholders to track KPIs and uncover insights.
 
